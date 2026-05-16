@@ -1,45 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+
 <style>
+
 body {
-  margin: 0;
-  background: transparent;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
 }
+
+/* MAIN TICKER */
 
 .ticker {
-  width: 100%;
-  height: 42px;
-  overflow: hidden;
-  white-space: nowrap;
-  background: #05070d;
-  border: 1px solid rgba(0, 255, 255, 0.35);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    background: transparent;
 }
+
+/* MOVING TEXT */
 
 .ticker span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll 18s linear infinite;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 8px #00ffff;
+
+    display: inline-block;
+
+    padding-left: 100%;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    animation: scroll 18s linear infinite;
+
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
 }
 
+/* ANIMATION */
+
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
+
 </style>
 </head>
 
 <body>
-  <div class="ticker">
-    <span>🚀 Active Customers +12% | SLA Breaches -8% | Delivered Cards improved this week | International Transfers performance is stable</span>
-  </div>
+
+<div class="ticker">
+
+<span>
+🚀 Active Customers +12% &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+🔥 SLA Breaches -8% &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+💳 Delivered Cards improved this week &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+🌍 International Transfers performance is stable
+</span>
+
+</div>
+
 </body>
 </html>
